@@ -10,7 +10,7 @@ let
   appCrossArmv7l = hsApp { pkgs = pkgsArmv7l; };
 
   patchForNotNixLinux = {app, name}:
-    pkgsNative.runCommand "${app.name}-embedded" { } ''
+    pkgsNative.runCommand "${app.name}-patched" { } ''
       set -eu
       cp ${app}/bin/${name} $out
       chmod +w $out

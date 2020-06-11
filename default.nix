@@ -3,6 +3,6 @@ let
 in
 { pkgs ? pkgsNix.native
 }:
-pkgs.haskell-nix.stackProject {
+pkgs.haskell-nix.project {
   src = pkgs.haskell-nix.haskellLib.cleanGit { src = ./.; };
 }
